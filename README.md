@@ -1,0 +1,253 @@
+# Investment Banking Guide - German Banks
+
+A comprehensive educational platform for learning investment banking concepts, structured products, and derivatives with a focus on the German market.
+
+## 🎯 Project Overview
+
+This is a Next.js-based learning platform designed for software engineers working in investment banking. It provides:
+
+- **7 Learning Phases** covering fundamentals to advanced topics
+- **Self-Paced Learning** - go at your own speed
+- **Detailed Topics** with real-world examples from German markets
+- **Interactive Components**: Accordions, tooltips, modals for better UX
+- **Markdown-based Content** for easy content management
+- **Dark/Light Theme** support
+- **Responsive Design** optimized for all devices
+
+## 📋 Prerequisites
+
+- **Node.js**: Version 20.9.0 or higher
+- **npm**: Version 10 or higher
+
+## 🚀 Getting Started
+
+### 1. Install Dependencies
+
+```bash
+npm install
+```
+
+### 2. Run Development Server
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) to view the application.
+
+### 3. Build for Production
+
+```bash
+npm run build
+npm start
+```
+
+## 📁 Project Structure
+
+```
+investment-banking-guide/
+├── app/                          # Next.js app router
+│   ├── layout.tsx               # Root layout with theme provider
+│   ├── page.tsx                 # Home page (roadmap overview)
+│   ├── phase/
+│   │   └── [phaseNumber]/
+│   │       ├── page.tsx         # Phase detail page
+│   │       └── [topicId]/
+│   │           └── page.tsx     # Topic detail page
+│   └── globals.css              # Global styles
+├── components/                   # React components
+│   ├── ui/                      # shadcn/ui components
+│   ├── ThemeProvider.tsx        # Theme context provider
+│   ├── ThemeToggle.tsx          # Dark/light mode toggle
+│   └── ExampleModal.tsx         # Real-world example modals
+├── content/                      # Markdown content
+│   └── phases/
+│       ├── phase-0/
+│       │   ├── index.md         # Phase overview
+│       │   ├── financial-markets.md
+│       │   └── primary-secondary.md
+│       ├── phase-1/
+│       └── ...
+├── lib/                          # Utilities
+│   ├── markdown.ts              # Markdown parser & reader
+│   ├── data.ts                  # TypeScript data structures
+│   └── utils.ts                 # Helper functions
+└── public/                       # Static assets
+```
+
+## 📝 Content Management
+
+All educational content is stored in Markdown files under `/content/phases/`. Each phase has:
+
+- `index.md` - Phase overview with metadata
+- Individual topic files (e.g., `financial-markets.md`)
+
+### Markdown Frontmatter Structure
+
+**Phase Index (`index.md`):**
+```yaml
+---
+phaseNumber: 0
+title: Financial Market Foundations
+subtitle: Understanding the basics
+goal: Understand what trades, where, and who is involved.
+color: emerald
+duration: 5-6 hours
+topics:
+  - financial-markets
+  - primary-secondary
+---
+```
+
+**Topic File:**
+```yaml
+---
+id: financial-markets
+title: What is a Financial Market
+phase: 0
+order: 1
+duration: 1 hour
+difficulty: Beginner
+---
+```
+
+## 🎨 Features
+
+### 1. Roadmap Overview
+- Visual cards for each learning phase
+- Color-coded by phase
+- Time estimates and topic counts
+- Direct navigation to phases
+
+### 2. Phase Pages
+- Detailed phase descriptions
+- List of all topics in the phase
+- Difficulty badges
+- Sequential navigation
+
+### 3. Topic Pages
+- Full markdown content rendered as HTML
+- **Real-world examples** in modal dialogs
+- **Accordion sections** for quick reference
+- **Tooltips** for additional context
+- **Navigation** to previous/next topics
+- Study tips and best practices
+
+### 4. Real-World Examples
+Clickable modals showing actual products from German markets:
+- Porsche IPO details
+- DAX trading examples
+- Volkswagen bond issuances
+- Deutsche Bank structured products
+
+### 5. Theme Support
+- Light and dark modes
+- Automatic system preference detection
+- Smooth transitions
+
+## 🛠️ Technology Stack
+
+- **Framework**: Next.js 16 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS 4
+- **UI Components**: shadcn/ui
+- **Theme**: next-themes
+- **Markdown**: gray-matter, remark, remark-html
+- **Icons**: lucide-react
+
+## 📚 Learning Roadmap (Self-Paced)
+
+### Phase 0: Financial Market Foundations
+- What is a Financial Market
+- Primary vs Secondary Market
+- Market Participants & Roles
+- Investment Banking vs Commercial Banking
+
+### Phase 1: Asset Classes & Underlyings
+- Equities (Stocks & Indices)
+- Fixed Income (Bonds)
+- Foreign Exchange (FX)
+- Commodities
+- Volatility & Correlation
+
+### Phase 2: Derivatives Basics ⚠️ CRITICAL
+- What is a Derivative
+- Forwards & Futures
+- Options: Call & Put
+- Payoff Diagrams
+- Moneyness & Time Value
+
+### Phase 3: Leverage Products
+- Warrants
+- Knock-Out Certificates (Turbos)
+- Mini-Futures
+- Leverage & Margin Mechanics
+
+### Phase 4: Structured Products
+- Capital Protection Notes
+- Discount Certificates
+- Bonus Certificates
+- Reverse Convertibles
+- Autocallables (Very Important)
+
+### Phase 5: Product Lifecycle & Payoff Modeling
+- Product Issuance
+- Daily Pricing & Valuation
+- Corporate Actions
+- Lifecycle Events
+- Event-Driven Architecture
+
+### Phase 6: Pricing & Risk
+- Fair Value & Pricing Models
+- Volatility in Pricing
+- The Greeks
+- Sensitivity Analysis
+
+### Phase 7: Regulation & EU Reality
+- MiFID II
+- PRIIPs & KID
+- Suitability & Appropriateness
+- Transparency Requirements
+
+## 🎓 Target Audience
+
+This guide is specifically designed for:
+- Software engineers working on investment banking systems
+- Developers building trading platforms
+- Engineers in fintech companies
+- Anyone working with structured products in Germany/EU
+
+## 🔧 Development
+
+### Adding New Content
+
+1. Create a new phase folder: `/content/phases/phase-X/`
+2. Add `index.md` with phase metadata
+3. Create topic markdown files
+4. Real examples in `/components/ExampleModal.tsx`
+
+### Styling
+
+- Global styles: `app/globals.css`
+- Component styles: Tailwind CSS classes
+- Theme variables: CSS variables in `globals.css`
+
+## 📄 License
+
+This project is for educational purposes.
+
+## 🤝 Contributing
+
+Content improvements and corrections are welcome. Focus on:
+- Accuracy of financial concepts
+- Real-world German market examples
+- Software engineering perspectives
+- Clear explanations for non-finance backgrounds
+
+## 📞 Support
+
+For questions about the content or technical issues, please open an issue on the repository.
+
+---
+
+**Note**: This platform is educational and does not provide investment advice. All examples are for learning purposes only.
