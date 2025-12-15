@@ -230,13 +230,6 @@ export const topicGlossaryTerms: Record<string, GlossaryTerm[]> = {
     { key: "Spread", term: "Bid-Ask Spread", definition: "Difference between bid and ask prices." },
     { key: "Vol", term: "Volatility", definition: "Key input for option-based product pricing." },
   ],
-  "corporate-actions": [
-    { key: "CA", term: "Corporate Action", definition: "Event affecting a security (dividend, split, etc.)." },
-    { key: "Ex-Div", term: "Ex-Dividend Date", definition: "Date after which new buyers don't receive dividend." },
-    { key: "Adj", term: "Adjustment", definition: "Modification to product terms due to corporate action." },
-    { key: "Split", term: "Stock Split", definition: "Increasing shares while reducing price proportionally." },
-    { key: "M&A", term: "Merger/Acquisition", definition: "Corporate combination requiring product adjustment." },
-  ],
   "barrier-monitoring": [
     { key: "KO", term: "Knock-Out", definition: "Barrier event terminating the product." },
     { key: "KI", term: "Knock-In", definition: "Barrier event activating a product feature." },
