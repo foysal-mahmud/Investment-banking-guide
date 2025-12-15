@@ -260,13 +260,6 @@ export const topicGlossaryTerms: Record<string, GlossaryTerm[]> = {
     { key: "V", term: "Vega", definition: "Sensitivity to volatility changes." },
     { key: "ρ", term: "Rho", definition: "Sensitivity to interest rate changes." },
   ],
-  "volatility": [
-    { key: "HV", term: "Historical Volatility", definition: "Volatility calculated from past price data." },
-    { key: "IV", term: "Implied Volatility", definition: "Volatility implied by current option prices." },
-    { key: "Vol Smile", term: "Volatility Smile", definition: "Pattern of IV across different strikes." },
-    { key: "VIX", term: "Volatility Index", definition: "Market's expectation of 30-day volatility." },
-    { key: "ATM Vol", term: "At-The-Money Volatility", definition: "Implied volatility for ATM options." },
-  ],
   "sensitivity-analysis": [
     { key: "VaR", term: "Value at Risk", definition: "Maximum expected loss at confidence level." },
     { key: "ES", term: "Expected Shortfall", definition: "Average loss beyond VaR threshold." },
