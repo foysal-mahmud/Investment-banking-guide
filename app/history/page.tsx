@@ -2,6 +2,7 @@
 
 import Header from '@/components/Header';
 import { BookOpen, ArrowRight, FileText, Landmark, Workflow } from 'lucide-react';
+import { processTextWithTerms } from '@/lib/term-processor';
 
 export default function HistoryPage() {
   return (
@@ -45,9 +46,9 @@ export default function HistoryPage() {
               </h2>
             </div>
             <p className="text-sm sm:text-base text-gray-700 dark:text-gray-200">
-              In Europe, the same legal entity can often be{' '}
-              <span className="font-semibold">both a commercial bank and an investment bank</span>{' '}
-              (&quot;universal bank&quot;). Still, you can group the main players as:
+              In Europe, the same <>{processTextWithTerms('legal entity')}</> can often be{' '}
+              <span className="font-semibold">both a <>{processTextWithTerms('commercial bank')}</> and an <>{processTextWithTerms('investment bank')}</></span>{' '}
+              (&quot;<>{processTextWithTerms('universal bank')}</>&quot;). Still, you can group the main players as:
             </p>
 
             <div className="overflow-x-auto">
@@ -71,7 +72,7 @@ export default function HistoryPage() {
                       Universal / Global Banks
                     </td>
                     <td className="px-3 py-2 text-gray-700 dark:text-gray-200">
-                      Issue structured products, make markets, run large trading and risk platforms.
+                      Issue <>{processTextWithTerms('structured products')}</>, make markets, run large trading and risk platforms.
                     </td>
                     <td className="px-3 py-2 text-gray-700 dark:text-gray-200">
                       Deutsche Bank, Commerzbank, UBS, UniCredit Bank (HypoVereinsbank)
@@ -149,7 +150,7 @@ export default function HistoryPage() {
                       Primary Market
                     </td>
                     <td className="px-3 py-2">
-                      Bank issues a new product, assigns an ISIN, publishes term sheet / KID and
+                      Bank issues a new product, assigns an <>{processTextWithTerms('ISIN')}</>, publishes <>{processTextWithTerms('term sheet')}</> / <>{processTextWithTerms('KID')}</> and
                       sells initial volume to clients (often via distribution networks).
                     </td>
                     <td className="px-3 py-2">
@@ -161,8 +162,7 @@ export default function HistoryPage() {
                       Secondary Market
                     </td>
                     <td className="px-3 py-2">
-                      After issuance the product trades between investors; issuing bank or market
-                      maker quotes bid / ask prices and provides liquidity.
+                      After issuance the product trades between investors; issuing bank or <>{processTextWithTerms('market maker')}</> quotes bid / ask prices and provides liquidity.
                     </td>
                     <td className="px-3 py-2">
                       Börse Stuttgart (EUWAX), Börse Frankfurt, SIX Swiss Exchange, OTC RFQ with the
@@ -275,8 +275,8 @@ export default function HistoryPage() {
                   Documents &amp; Product Data
                 </h3>
                 <ul className="list-disc list-inside text-xs sm:text-sm space-y-1">
-                  <li>Generate and approve Term Sheet / Final Terms.</li>
-                  <li>Produce PRIIPs KID and update base prospectus where required.</li>
+                  <li>Generate and approve <>{processTextWithTerms('Term Sheet')}</> / Final Terms.</li>
+                  <li>Produce <>{processTextWithTerms('PRIIPs')}</> <>{processTextWithTerms('KID')}</> and update base <>{processTextWithTerms('prospectus')}</> where required.</li>
                   <li>On‑board product into master data, pricing, risk, booking &amp; reporting systems.</li>
                 </ul>
               </div>
@@ -289,9 +289,9 @@ export default function HistoryPage() {
                   Listing, Trading &amp; Lifecycle
                 </h3>
                 <ul className="list-disc list-inside text-xs sm:text-sm space-y-1">
-                  <li>Activate ISIN, list on exchanges or OTC platforms, start distribution.</li>
-                  <li>Stream secondary market prices and process client orders.</li>
-                  <li>Handle coupons, barrier checks, corporate actions, and final settlement.</li>
+                  <li>Activate <>{processTextWithTerms('ISIN')}</>, list on exchanges or <>{processTextWithTerms('OTC')}</> platforms, start distribution.</li>
+                  <li>Stream <>{processTextWithTerms('secondary market')}</> prices and process client orders.</li>
+                  <li>Handle <>{processTextWithTerms('coupon')}</>s, <>{processTextWithTerms('barrier')}</> checks, corporate actions, and final settlement.</li>
                 </ul>
               </div>
             </div>
@@ -312,22 +312,22 @@ export default function HistoryPage() {
                   product name / marketing name, issuer legal entity.
                 </li>
                 <li>
-                  <span className="font-semibold">Economic terms:</span> underlying(s), type
+                  <span className="font-semibold">Economic terms:</span> <>{processTextWithTerms('underlying')}</>(s), type
                   (Discount, Bonus, Autocallable, KO, etc.), currency, nominal amount, issue price,
-                  strike levels, barriers, caps / floors.
+                  <>{processTextWithTerms('strike')}</> levels, <>{processTextWithTerms('barrier')}</>s, caps / floors.
                 </li>
                 <li>
                   <span className="font-semibold">Timeline:</span> trade date, issue date, first
-                  valuation date, observation dates, maturity date, call dates.
+                  valuation date, observation dates, <>{processTextWithTerms('maturity')}</> date, call dates.
                 </li>
                 <li>
-                  <span className="font-semibold">Cash‑flow terms:</span> coupon rate and frequency,
+                  <span className="font-semibold">Cash‑flow terms:</span> <>{processTextWithTerms('coupon')}</> rate and frequency,
                   memory / conditional logic, redemption formula, settlement type (cash vs
                   physical).
                 </li>
                 <li>
                   <span className="font-semibold">Risk &amp; regulation:</span> target market,
-                  complexity flag, risk class, PRIIPs / MiFID references, KID and prospectus
+                  complexity flag, risk class, <>{processTextWithTerms('PRIIPs')}</> / <>{processTextWithTerms('MiFID')}</> references, <>{processTextWithTerms('KID')}</> and <>{processTextWithTerms('prospectus')}</>
                   identifiers.
                 </li>
                 <li>

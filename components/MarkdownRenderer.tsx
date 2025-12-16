@@ -3,6 +3,7 @@
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import rehypeRaw from 'rehype-raw'
+import { processNodeWithTerms } from '@/lib/term-processor'
 
 interface MarkdownRendererProps {
   content: string
@@ -33,7 +34,7 @@ export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
         ),
         p: ({ children }) => (
           <div className="mb-3 leading-relaxed text-sm text-gray-800 dark:text-gray-200 transition-colors duration-300">
-            {children}
+            {processNodeWithTerms(children)}
           </div>
         ),
         ul: ({ children }) => (
@@ -48,7 +49,7 @@ export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
         ),
         li: ({ children }) => (
           <li className="mb-1 text-sm text-gray-800 dark:text-gray-200 transition-colors duration-300">
-            {children}
+            {processNodeWithTerms(children)}
           </li>
         ),
         blockquote: ({ children }) => (
@@ -88,7 +89,7 @@ export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
         ),
         td: ({ children }) => (
           <td className="border border-gray-300 dark:border-gray-600 px-4 py-2 text-gray-800 dark:text-gray-200 transition-colors duration-300">
-            {children}
+            {processNodeWithTerms(children)}
           </td>
         ),
         // Link styling
