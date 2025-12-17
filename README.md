@@ -1,4 +1,4 @@
-# Investment Banking Guide - German Banks
+# Investment Banking Guide
 
 A comprehensive educational platform for learning investment banking concepts, structured products, and derivatives with a focus on the German market.
 
@@ -94,7 +94,6 @@ title: Financial Market Foundations
 subtitle: Understanding the basics
 goal: Understand what trades, where, and who is involved.
 color: emerald
-duration: 5-6 hours
 topics:
   - financial-markets
   - primary-secondary
@@ -108,7 +107,6 @@ id: financial-markets
 title: What is a Financial Market
 phase: 0
 order: 1
-duration: 1 hour
 difficulty: Beginner
 ---
 ```
@@ -269,18 +267,6 @@ This guide is specifically designed for:
 ## 📄 License
 
 This project is for educational purposes.
-
-## 🤝 Contributing
-
-Content improvements and corrections are welcome. Focus on:
-- Accuracy of financial concepts
-- Real-world German market examples
-- Software engineering perspectives
-- Clear explanations for non-finance backgrounds
-
-## 📞 Support
-
-For questions about the content or technical issues, please open an issue on the repository.
 
 ---
 
