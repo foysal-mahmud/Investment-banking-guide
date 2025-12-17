@@ -23,8 +23,6 @@ export function processTextWithTerms(text: string): React.ReactNode[] {
   );
 
   const segments: TextSegment[] = [];
-  let remainingText = text;
-  let lastIndex = 0;
 
   // Find all term matches (case-insensitive)
   const matches: Array<{
@@ -132,11 +130,18 @@ export function processNodeWithTerms(node: React.ReactNode): React.ReactNode {
 
   if (React.isValidElement(node)) {
     // If it's a React element, process its children recursively
-    if (node.props.children) {
-      const processedChildren = React.Children.map(node.props.children, (child) =>
-        processNodeWithTerms(child)
+    const element = node as React.ReactElement<{ children?: React.ReactNode }>;
+
+    if (element.props && element.props.children) {
+      const processedChildren = React.Children.map(
+        element.props.children,
+        (child) => processNodeWithTerms(child)
       );
-      return React.cloneElement(node, { ...node.props, children: processedChildren });
+
+      return React.cloneElement(element, {
+        ...element.props,
+        children: processedChildren,
+      });
     }
   }
 

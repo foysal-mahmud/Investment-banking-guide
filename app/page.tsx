@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { getAllPhases, getTopicsByPhase } from "@/lib/markdown";
-import { BookOpen, Target, TrendingUp, BarChart3, Wallet, LineChart, PieChart, Shield, Scale, Briefcase, Search, ScrollText } from "lucide-react";
+import { BookOpen, Target, TrendingUp, BarChart3, Wallet, LineChart, PieChart, Shield, Scale, Briefcase, Search, ScrollText, Linkedin, Github } from "lucide-react";
 
 const phaseIcons: Record<number, React.ReactNode> = {
   0: <BookOpen className="h-6 w-6" />,
@@ -250,6 +250,40 @@ export default async function Home() {
           </div>
         </div>
       </div>
+
+      {/* Copyright Footer */}
+      <footer className="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 py-3 mt-8 transition-colors duration-300">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p className="text-lg mb-2 text-gray-500 dark:text-gray-400 transition-colors duration-300">
+              投資銀行ガイド
+            </p>
+          </div>
+          <div className="flex items-center justify-center space-x-2 text-xs text-gray-500 dark:text-gray-400 transition-colors duration-300">
+            <span>© 2025 Foysal Mahmud</span>
+            <span>•</span>
+            <Link
+              href="https://www.linkedin.com/in/md-foysal-mahmud/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
+            >
+              <Linkedin className="h-3 w-3 mr-1" />
+              LinkedIn
+            </Link>
+            <span>•</span>
+            <Link
+              href="https://github.com/foysal-mahmud"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
+            >
+              <Github className="h-3 w-3 mr-1" />
+              GitHub
+            </Link>
+          </div>
+        </div>
+      </footer>
     </main>
   );
 }

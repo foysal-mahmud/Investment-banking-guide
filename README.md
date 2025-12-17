@@ -6,7 +6,9 @@ A comprehensive educational platform for learning investment banking concepts, s
 
 This is a Next.js-based learning platform designed for software engineers working in investment banking. It provides:
 
-- **7 Learning Phases** covering fundamentals to advanced topics
+- **8 Learning Phases** (Phase 0-7) covering fundamentals to advanced topics
+- **History & Lifecycle Overview** - comprehensive guide to investment banking operations and product lifecycle
+- **Investment Banking Dictionary** - searchable dictionary with 100+ terms, abbreviations, and definitions
 - **Self-Paced Learning** - go at your own speed
 - **Detailed Topics** with real-world examples from German markets
 - **Interactive Components**: Accordions, tooltips, modals for better UX
@@ -113,34 +115,49 @@ difficulty: Beginner
 
 ## 🎨 Features
 
-### 1. Roadmap Overview
-- Visual cards for each learning phase
+### 1. Home Page & Roadmap Overview
+- Visual cards for each learning phase (8 phases total)
 - Color-coded by phase
 - Time estimates and topic counts
 - Direct navigation to phases
+- Quick access to History overview and Dictionary
 
-### 2. Phase Pages
+### 2. History & Lifecycle Overview
+- Comprehensive guide to investment banking operations
+- Explanation of bank types (universal banks, wealth managers, exchanges)
+- Product lifecycle from design to trading
+- Real-world workflow documentation
+- Regulatory and documentation requirements
+
+### 3. Investment Banking Dictionary
+- Searchable dictionary with 100+ terms
+- Categorized by topic (Derivatives, Structured Products, Regulation, etc.)
+- Abbreviations and definitions
+- Quick reference for technical terms
+- Expandable/collapsible categories
+
+### 4. Phase Pages
 - Detailed phase descriptions
 - List of all topics in the phase
 - Difficulty badges
 - Sequential navigation
 
-### 3. Topic Pages
+### 5. Topic Pages
 - Full markdown content rendered as HTML
 - **Real-world examples** in modal dialogs
 - **Accordion sections** for quick reference
-- **Tooltips** for additional context
+- **Tooltips** for additional context (terms automatically highlighted)
 - **Navigation** to previous/next topics
 - Study tips and best practices
 
-### 4. Real-World Examples
+### 6. Real-World Examples
 Clickable modals showing actual products from German markets:
 - Porsche IPO details
 - DAX trading examples
 - Volkswagen bond issuances
 - Deutsche Bank structured products
 
-### 5. Theme Support
+### 7. Theme Support
 - Light and dark modes
 - Automatic system preference detection
 - Smooth transitions
@@ -197,7 +214,7 @@ Clickable modals showing actual products from German markets:
 - Lifecycle Events
 - Event-Driven Architecture
 
-### Phase 6: Pricing & Risk
+### Phase 6: Pricing & Risk (High Level)
 - Fair Value & Pricing Models
 - Volatility in Pricing
 - The Greeks
@@ -208,6 +225,23 @@ Clickable modals showing actual products from German markets:
 - PRIIPs & KID
 - Suitability & Appropriateness
 - Transparency Requirements
+
+## 📖 Additional Resources
+
+### History & Lifecycle Overview
+A dedicated page explaining:
+- Types of banks involved (universal banks, wealth managers, exchanges)
+- Market organization and structure
+- Complete product lifecycle from design to trading
+- Key documents and regulatory steps
+- Real-world workflows in German banking
+
+### Investment Banking Dictionary
+A comprehensive searchable dictionary featuring:
+- 100+ terms and definitions
+- Abbreviations commonly used in banking systems
+- Categorized by topic for easy navigation
+- Quick reference for technical terminology
 
 ## 🎓 Target Audience
 
