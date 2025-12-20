@@ -1,6 +1,5 @@
-<div style="background-color: #dc2626; color: #ffffff; padding: 12px; border-radius: 4px; margin-bottom: 20px; text-align: center; font-weight: bold;">
-⚠️ This website is made by AI help and for personal use only
-</div>
+> [!WARNING]
+> This website is made by AI help and for personal use only
 
 # Investment Banking Guide
 
