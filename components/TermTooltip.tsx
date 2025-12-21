@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Tooltip,
   TooltipContent,
@@ -16,11 +16,22 @@ interface TermTooltipProps {
 }
 
 export function TermTooltip({ term, definition, children }: TermTooltipProps) {
+  const [open, setOpen] = useState(false);
+
   return (
     <TooltipProvider delayDuration={200}>
-      <Tooltip>
+      <Tooltip open={open} onOpenChange={setOpen}>
         <TooltipTrigger asChild>
-          <span className="inline-block cursor-help">
+          <span 
+            className="inline-block cursor-help touch-manipulation"
+            onClick={(e: React.MouseEvent<HTMLSpanElement>) => {
+              // Toggle tooltip on click/tap (works on both mobile and desktop)
+              // This allows mobile users to tap to see tooltips
+              e.preventDefault();
+              e.stopPropagation();
+              setOpen(!open);
+            }}
+          >
             {children || term}
           </span>
         </TooltipTrigger>
@@ -28,6 +39,8 @@ export function TermTooltip({ term, definition, children }: TermTooltipProps) {
           side="top"
           sideOffset={8}
           className="max-w-sm p-4 text-sm leading-relaxed z-50 border-0 shadow-xl backdrop-blur-xl bg-white/85 dark:bg-gray-800/85 border-white/30 dark:border-gray-700/30"
+          onPointerDownOutside={() => setOpen(false)}
+          onEscapeKeyDown={() => setOpen(false)}
         >
           <div className="space-y-2">
             <div className="font-semibold text-gray-900 dark:text-gray-100">
